@@ -1,4 +1,5 @@
 from Hentai import mio, START_TIME, MIO_NAME, MIO_USERNAME, MIO_ID, SUDO_CHATS
+from config import SUDOERS
 from pyrogram import __version__ as pyrover
 from platform import python_version as pyver
 from Hentai.strings import *
