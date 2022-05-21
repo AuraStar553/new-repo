@@ -220,22 +220,14 @@ async def send_from_sauce(bot, message):
 async def browse(_, message):
   caption = "Please Choose A Category From Below To Browse"
   btns = []
-  for a in range(int(len(TYPES)/2)):
+  for a in range(int(len(TYPES))):
     type1 = TYPES[int(a)]
-    type2 = TYPES[int(a + 4)]
     btn = [
       InlineKeyboardButton(
         text=type1['name'],
         callback_data=f"browser {type1['key']}"
       )
       ]
-    try:
-      btn.append(InlineKeyboardButton(
-        text=type2['name'],
-        callback_data=f"browser{type2['key']}"
-      ))
-    except:
-      pass
     btns.append(btn)
   markup=InlineKeyboardMarkup(btns)
   return await message.reply_text(text=caption, reply_markup=markup)
@@ -254,17 +246,12 @@ async def beowc(_, query):
   for a in range(10):
     se.append(random.choice(opts))
   btns = []
-  for s in range(int(len(se)/2)):
+  for s in range(int(len(se))):
     in1 = se[int(s)]
-    in2 = se[int(s + 5)]
     btn = [
       InlineKeyboardButton(
         text=in1['name'],
         callback_data=f"brew{in1['data']}"
-      ),
-      InlineKeyboardButton(
-        text=in2['name'],
-        callback_data=f"brew{in2['data']}"
       )
     ]
     btns.append(btn)
