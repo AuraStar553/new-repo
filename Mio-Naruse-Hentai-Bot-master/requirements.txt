@@ -1,0 +1,8 @@
+aiohttp
+pyrogram==1.4.12
+python-dotenv
+feedparser
+bs4
+libtorrent
+tgcrypto
+gitpython
