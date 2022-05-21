@@ -12,3 +12,4 @@ SUDO_CHAT = SUDO_CHAT.split(" ")
 SUDO_CHATS = []
 for SUDO in SUDO_CHAT:
   SUDO_CHATS.append(int(SUDO))
+

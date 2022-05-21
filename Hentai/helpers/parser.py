@@ -127,7 +127,7 @@ TYPES = [
 
 
 def is_file(file):
-  file = glob.glob(f"{file}/*)
+  file = glob.glob(f"{file}/*")
   file = len(file)
   if file == 0:
     return True
