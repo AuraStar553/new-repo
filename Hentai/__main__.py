@@ -284,6 +284,13 @@ async def brewww(_, query):
   return await query.message.edit(data)
 
 
+
+@mio.on_message(filters.command("update", f"update@{MIO_USERNAME}") & filters.user("SUDOERS") & filters.chat(SUDO_CHATS))
+async def update(_, message):
+  await message.reply_text("Trying To Update Please Wait")
+  os.system("pkill -9 python3 && git pull && python3 -m Hentai")
+
+
 if __name__ == '__main__':
   print("=====================================================================\n")
   print("[INFO]: BOT STARTED SUCCESSFULLY")
