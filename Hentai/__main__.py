@@ -267,13 +267,13 @@ async def brewww(_, query):
   dat['title'] = data['title']
   dat['size'] = data['File size']
   dat['category'] = name
-  dat['get_this_porno'] = f"/get https://sukebei.nyaa.si/view/{href}"
+  dat['get_this_porno'] = f"/get@{MIO_USERNAME} https://sukebei.nyaa.si/view/{href}"
   data = mag_parser(dat)
   return await query.message.edit(data)
 
 
 
-@mio.on_message(filters.command("update", f"update@{MIO_USERNAME}") & filters.user("SUDOERS") & filters.chat(SUDO_CHATS))
+@mio.on_message(filters.command("update", f"update@{MIO_USERNAME}") & filters.user("SUDOERS"))
 async def update(_, message):
   await message.reply_text("Trying To Update Please Wait")
   os.system("pkill -9 python3 && git pull && python3 -m Hentai")
