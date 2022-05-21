@@ -3,7 +3,6 @@ from pyrogram import Client
 import os
 import time
 import libtorrent as lt
-from utils import git
 
 
 mio = Client(
@@ -27,6 +26,3 @@ MIO_ID = m.id
 print("[INFO]: STARTING LIB TORRENT CLIENT")
 ses = lt.session()
 ses.listen_on(6881, 6891)
-
-print("[INFO]: CHECKING UPDATES")
-git()
